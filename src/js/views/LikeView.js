@@ -34,6 +34,7 @@ elements.likesList.insertAdjacentHTML('beforeend', markup);
 };
 
 export const deleteLike = id => {
-    const el = document.querySelector(`.likes__link [href='#${id}'`);
+    const el = document.querySelector(`.likes__link[href='#${id}'`);
+    console.log(el);
     if(el) el.parentElement.removeChild(el);
 }

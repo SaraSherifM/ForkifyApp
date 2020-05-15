@@ -5,6 +5,7 @@ import { elements } from './base';
 export const clearInput = () => {
     elements.searchInput.value ='';
 };
+
 export const clearResult = () => {
     elements.resultList.innerHTML = '';
     elements.resultPages.innerHTML = '';
@@ -78,7 +79,7 @@ elements.resultList.insertAdjacentHTML('beforeend', markup);
 
 };
 
-//type: 'prev' or 'type'
+//type: 'prev' or 'next'
 const createButton = (page,type) => `
 
 <button class="btn-inline results__btn--${type}" data-goto = ${type === 'prev'? page - 1 : page + 1 }>
@@ -97,6 +98,7 @@ const renderBtns =  (page ,numResults, resPerPage) => {
 
     if(page === 1 && pages > 1){
         //only button next page 
+        //Douptfull that it actually needs a prev botton 
         button = createButton(page,'next');
     }
     else if (page < pages){

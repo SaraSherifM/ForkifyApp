@@ -19,8 +19,8 @@ export default class List {
     deleteItem(id){
         const index = this.items.findIndex(el => el.id === id);
     /*splice takes start index and how many positions it will takeit then return those elements and delete them from original array it is similar to slice with the difference that slice accept start and end index */
-    // [2,4,8].splice(1,1) => returns 4 , array become [2,8]
-    //[2,4,8].slice(1,1) => returns 4 , array become [2,4,8]
+    // [2,4,8].splice(1,1) =>  4 , array become [2,8]
+    //[2,4,8].slice(1,1) =>  4 , array become [2,4,8]
         this.items.splice(index,1);
     }
 

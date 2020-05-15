@@ -8,7 +8,8 @@ export default class Likes {
         const like = {id, title, auther, img };
         this.likes.push(like);
         //persist data into the local storage
-        this.persistDate();
+        this.persistData();
+        console.log(localStorage.getItem('likes'));
 
         return like;
     }
@@ -19,6 +20,8 @@ export default class Likes {
         //persist data into the local storage
         
         this.likes.splice(like,1);
+        this.persistData();
+        console.log(localStorage.getItem('likes'));
     }
 
     isLiked(id) {
@@ -29,7 +32,7 @@ export default class Likes {
         return this.likes.length;
     }
 
-    persistDate(){
+    persistData(){
         localStorage.setItem('likes', JSON.stringify(this.likes));
     }
 

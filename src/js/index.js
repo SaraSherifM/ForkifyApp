@@ -85,6 +85,7 @@ elements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
+
 elements.resultPages.addEventListener('click', e => {
 
     const btn = e.target.closest('.btn-inline');
@@ -153,7 +154,7 @@ const controlList = () => {
     // 1- create new list  if there is none yet 
     if(!state.list) state.list = new List();
 
-    console.log(state.list);
+    //console.log(state.list);
 
     //2- Add each ingredient to the list and UI
     state.recipe.ingredients.forEach( el => {
@@ -189,7 +190,7 @@ Likes Controller
 const controlLike = () => {
     if(!state.likes) state.likes = new Likes();
     const currentId = state.recipe.id;
-    console.log(currentId)
+    //console.log(currentId)
     // User has not yet liked this recipe
     if(!state.likes.isLiked(currentId)){
         //add Like to the state, likes array in likes class Model
