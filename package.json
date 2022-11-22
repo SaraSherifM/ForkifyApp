@@ -16,7 +16,7 @@
     "fractional": "^1.0.0",
     "uniqid": "^5.2.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
